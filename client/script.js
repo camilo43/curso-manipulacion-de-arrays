@@ -22,7 +22,7 @@ let b = a["perro"] = 5
 
 console.log(a)*/
 
-//******REDUCE Challenge**********
+//****** REDUCE CHALLENGE **********
 
 /*const numbers = [1,2,3,4,5,6,7,8,9,10]
 
@@ -42,7 +42,7 @@ let cambios = (desde, hasta) => {
                 return a},{}))
 }*/
 
-//************ Every Challenge ********
+//************ EVERY CHALLENGE ********
 
 /*const team = [
     {
@@ -68,7 +68,7 @@ let cambios = (desde, hasta) => {
   }*/
 
 
-  //********* Join Example *********
+  //********* JOIN EXAMPLE *********
 
   /*const elements = ["Fire", "Air", "Water", "Tierra", "Aire", "Agua"]
 
@@ -90,8 +90,8 @@ let cambios = (desde, hasta) => {
   const unir = elements.join('--')
   console.log(unir)*/
 
-  //**********flatMap Challenge ********
-
+  //********** FLATMAP CHALLENGE ********
+/*
   const calendars = {
     primaryCalendar: [
       {
@@ -119,7 +119,61 @@ let cambios = (desde, hasta) => {
     ],
   };
   
-  const rta3 = Object.values(calendars).flatMap(item => {
+    const rta3 = Object.values(calendars).flatMap(item => {
       return item.map(date => date.startDate);
   });
+
+  const rta3 = Object.values(calendars).flatMap(e=> e.map(j=> j.startDate))
   console.log(rta3);
+  */
+
+
+  //******* MUTABLE FUNCTIONS CHALLENGE *****
+/*
+  const products = [
+    { title: "Pizza", price: 121, id: "🍕" },
+    { title: "Burger", price: 121, id: "🍔" },
+    { title: "Hot cakes", price: 121, id: "🥞" },
+  ];
+
+  const productsV2 = []
+
+  for(let i of products){
+      if (i.id != "🥞"){
+        productsV2.push(i)
+    } else {
+        console.log(productsV2) 
+    }
+  }
+
+  const productsV3 = [
+    { title: "Burger", price: 121, id: "🍔" },
+    { title: "Pizza", price: 121, id: "🍕" },
+    { title: "Hot cakes", price: 121, id: "🥞" },
+  ];
+
+  const update = {
+        id: "🍕",
+        changes: {
+            Description: "Delicious",
+            Price: 250,
+            Availability: "Now"
+        }
+  }
+
+  let indexItem = productsV3.findIndex(e=> e.id == update.id)
+
+  productsV3[indexItem].store = "Plaza Uno"
+
+  let productCopyV3 = [...productsV3]
+  productCopyV3[indexItem] = {...productCopyV3[indexItem], ...update.changes}
+  
+
+  console.log("ProductV3", productsV3)
+  console.log("Check original-modifications", productsV3)
+  console.log("ProductCopyV3", productCopyV3)
+  */
+
+    //******* SORT CHALLENGE *****
+
+    
