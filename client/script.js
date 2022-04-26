@@ -176,4 +176,42 @@ let cambios = (desde, hasta) => {
 
     //******* SORT CHALLENGE *****
 
-    
+    const orders = [
+        {
+          customerName: "Nicolas",
+          total: 600,
+          delivered: true,
+          date: new Date("2021 2 25 21:32:10")
+        },
+        {
+          customerName: "Zulema",
+          total: 120,
+          delivered: false,
+          date: new Date("2021 3 5 21:32:10")
+        },
+        {
+          customerName: "Santiago",
+          total: 1840,
+          delivered: true,
+          date: new Date("2021 1 22 21:32:10")
+        },
+        {
+          customerName: "Valentina",
+          total: 240,
+          delivered: true,
+          date: new Date("2021 2 19 21:32:10")
+        },
+      ];
+
+      /*
+      -------SORTING DATES-------
+
+      let fechas  = [new Date("2021 6 1 21:32:10"), new Date("2021 5 1 21:32:10"), new Date("2021 4 1 21:32:10"), new Date("2021 3 1 21:32:10"), new Date("2021 2 1 21:32:10") ]
+
+      let resultado = fechas.sort((a,b) => a - b)
+
+      console.log(resultado)*/
+
+      let newDates = orders.sort((a,b)=> a.date - b.date)
+
+      console.log(newDates)
